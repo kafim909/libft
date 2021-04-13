@@ -6,7 +6,7 @@
 /*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:30:53 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/12 11:46:54 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/13 10:32:21 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!dst || !src)

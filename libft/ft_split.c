@@ -6,7 +6,7 @@
 /*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 13:43:05 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/06 16:01:56 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/13 10:39:03 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ft_count(char const *s, char c)
 	return (count + 1);
 }
 
-static char		*customdup(const char *s1, size_t start, size_t end)
+static char	*customdup(const char *s1, size_t start, size_t end)
 {
 	size_t	i;
 	char	*str;
@@ -48,7 +48,7 @@ static char		*customdup(const char *s1, size_t start, size_t end)
 	return (str);
 }
 
-static char		**freetab(char **tab)
+static char	**freetab(char **tab)
 {
 	size_t	i;
 
@@ -62,7 +62,7 @@ static char		**freetab(char **tab)
 	return (NULL);
 }
 
-static char		**filltab(char **str, const char *s, char c)
+static char	**filltab(char **str, const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -89,7 +89,7 @@ static char		**filltab(char **str, const char *s, char c)
 	return (str);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**str;
 

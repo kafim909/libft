@@ -6,7 +6,7 @@
 /*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 13:53:54 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/04 15:35:43 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/13 10:39:30 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	custom_len(char const *s, size_t start, size_t len)
 	return (start + 1);
 }
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;

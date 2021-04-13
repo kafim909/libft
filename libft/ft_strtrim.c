@@ -6,7 +6,7 @@
 /*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 15:36:05 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/12 13:42:37 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/13 10:50:48 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	comp(char c, const char *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -35,9 +35,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	k = 0;
-	j = ft_strlen(s1) - 1;
 	if (!s1 || !set)
 		return (NULL);
+	j = ft_strlen(s1) - 1;
 	while (comp(s1[i], set) && s1[i])
 		i++;
 	if (!s1[i])
