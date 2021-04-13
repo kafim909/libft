@@ -36,7 +36,7 @@ so:			$(YO)
 			gcc -shared -o libft.so $(OBJS)
 
 clean:		
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${BONUS_OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
