@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 15:36:05 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/14 10:03:01 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/20 12:01:08 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,30 +26,37 @@ static int	comp(char c, const char *set)
 	return (0);
 }
 
+char	*error()
+{
+	char	*str;
+	size_t	k;
+	
+	k = 0;
+	str = malloc(sizeof(char));
+		if (!str)
+			return (NULL);
+		str[k] = '\0';
+		return (str);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
-	size_t	k;
 	char	*str;
 
 	i = 0;
-	k = 0;
 	if (!s1 || !set)
 		return (NULL);
 	j = ft_strlen(s1) - 1;
 	while (comp(s1[i], set) && s1[i])
 		i++;
 	if (!s1[i])
-	{
-		str = malloc(sizeof(char));
-		if (!str)
-			return (NULL);
-		str[k] = '\0';
-		return (str);
-	}
+		return (error());
 	while (comp(s1[j], set))
 		j--;
 	str = ft_substr(s1, i, j - i + 1);
+	if (!str)
+		return (NULL);	
 	return (str);
 }

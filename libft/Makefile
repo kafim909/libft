@@ -17,8 +17,6 @@ BONUS_OBJS	= ${BONUS:.c=.o}
 
 NAME		= libft.a
 
-YO			= libft.so
-
 CC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
@@ -30,10 +28,6 @@ ${NAME}:	${OBJS}	${HEAD}
 			ar -rcs ${NAME} ${OBJS} ${HEAD}
 
 all:		${NAME}
-
-so:			$(YO)
-	$(CC) -fPIC $(CFLAGS) $(SRCS)
-			gcc -shared -o libft.so $(OBJS)
 
 clean:		
 			${RM} ${OBJS} ${BONUS_OBJS}

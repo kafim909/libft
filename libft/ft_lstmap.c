@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 16:02:04 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/12 11:40:32 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/20 12:08:18 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*pos;
 	t_list	*temp;
 
-	if (!lst)
+	if (!lst || !f)
 		return (NULL);
 	temp = lst;
 	start_list = NULL;
