@@ -6,7 +6,7 @@
 /*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 15:36:05 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/20 12:01:08 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/20 12:14:54 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ static int	comp(char c, const char *set)
 	return (0);
 }
 
-char	*error()
+char	*error(void)
 {
 	char	*str;
 	size_t	k;
-	
+
 	k = 0;
 	str = malloc(sizeof(char));
-		if (!str)
-			return (NULL);
-		str[k] = '\0';
-		return (str);
+	if (!str)
+		return (NULL);
+	str[k] = '\0';
+	return (str);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -57,6 +57,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	str = ft_substr(s1, i, j - i + 1);
 	if (!str)
-		return (NULL);	
+		return (NULL);
 	return (str);
 }
