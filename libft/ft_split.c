@@ -6,12 +6,11 @@
 /*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 13:43:05 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/21 13:35:49 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/21 19:22:46 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_count(char const *s, char c)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 14:38:35 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/04 15:34:18 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/21 19:24:51 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (NULL);
 	while (*s1)
-	{
-		str[i] = (*(char *)s1);
-		s1++;
-		i++;
-	}
+		str[i++] = (*(char *)s1++);
 	while (*s2)
-	{
-		str[i] = (*(char *)s2);
-		s2++;
-		i++;
-	}
+		str[i++] = (*(char *)s2++);
 	str[i] = '\0';
 	return (str);
 }

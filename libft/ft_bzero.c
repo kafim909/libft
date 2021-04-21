@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 09:27:10 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/03 09:39:32 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/21 19:16:01 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	c;
-	int		i;
+	size_t	i;
 
-	c = '\0';
 	i = 0;
 	while (n > 0)
 	{
-		((char *)s)[i] = c;
+		((char *)s)[i] = '\0';
 		i++;
 		n--;
 	}

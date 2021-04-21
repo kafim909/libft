@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 09:40:11 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/14 12:56:59 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/21 19:21:27 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	int	i;
 
 	i = 0;
-	if (dst == 0 && src == 0)
+	if (!dst && !src)
 		return (0);
 	while (n > 0)
 	{

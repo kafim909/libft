@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 13:31:19 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/04 14:38:26 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/21 19:30:09 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	str = malloc(size * count);
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	while (i < count * size)
 	{
