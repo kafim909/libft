@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtournay <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtournay <mtournay@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 13:43:05 by mtournay          #+#    #+#             */
-/*   Updated: 2021/04/13 10:39:03 by mtournay         ###   ########.fr       */
+/*   Updated: 2021/04/21 13:35:49 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static size_t	ft_count(char const *s, char c)
 
 	count = 0;
 	i = 0;
+	if (s[i] != c)
+		count++;
 	while (s[i])
 	{
 		while (s[i] == c && s[i])
@@ -28,7 +30,8 @@ static size_t	ft_count(char const *s, char c)
 				count++;
 			i++;
 		}
-		i++;
+		if (s[i])
+			i++;
 	}
 	return (count + 1);
 }
